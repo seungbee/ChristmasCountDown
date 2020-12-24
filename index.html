@@ -16,12 +16,9 @@
     </div>
     
     <script>
-        var clock = document.getElementById("clock")
-
-        
+        let clock = document.getElementById("clock")
 
         function printClock(){
-            
             var t = new Date()
             var hour = 24 - t.getHours()
             var min = 60 - t.getMinutes()
@@ -36,16 +33,13 @@
             if(sec.toString().length == 1){
                 sec = "0" + sec.toString()
             }
-            var results = hour + " hours " + min + "min " + sec + " sec"
+            let results = hour + " hours " + min + "min " + sec + " sec"
             clock.innerHTML = results
 
-            if(hour == 0 && min == 0 & sec == 0){
+            if(hour == 0 && min == 0 && sec == 0){
                 clock.innerHTML = "Merry Christmas :D"
             }
-            setTimeout("printClock()", 1)
         }
-
-        printClock()
-
+        setInterval(() => printClock, 1000)
     </script>
 </body>
