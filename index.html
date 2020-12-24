@@ -22,9 +22,9 @@
     <script>
         setInterval(() => {
             let t = new Date()
-            let hour = 24 - t.getHours()
-            let min = 60 - t.getMinutes()
-            let sec = 60 - t.getSeconds()
+            let hour = 23 - t.getHours()
+            let min = 59 - t.getMinutes()
+            let sec = 59 - t.getSeconds()
             if(hour.toString().length == 1) hour = "0" + hour.toString()
             if(min.toString().length == 1) min = "0" + min.toString()
             if(sec.toString().length == 1) sec = "0" + sec.toString()
