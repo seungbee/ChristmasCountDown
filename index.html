@@ -17,15 +17,15 @@
     
     <script>
         setInterval(() => {
-        let t = new Date()
-        let hour = 24 - t.getHours()
-        let min = 60 - t.getMinutes()
-        let sec = 60 - t.getSeconds()
-        if(hour.toString().length == 1) hour = "0" + hour.toString()
-        if(min.toString().length == 1) min = "0" + min.toString()
-        if(sec.toString().length == 1) sec = "0" + sec.toString()
-        document.getElementById("clock").innerHTML = hour + " hours " + min + "min " + sec + " sec"
-        if(hour == 0 && min == 0 && sec == 0) return clock.innerHTML = "Merry Christmas :D"
-        }, 1000)
+            let t = new Date()
+            let hour = 24 - t.getHours()
+            let min = 60 - t.getMinutes()
+            let sec = 60 - t.getSeconds()
+            if(hour.toString().length == 1) hour = "0" + hour.toString()
+            if(min.toString().length == 1) min = "0" + min.toString()
+            if(sec.toString().length == 1) sec = "0" + sec.toString()
+            document.getElementById("clock").innerHTML = hour + " hours " + min + "min " + sec + " sec"
+            if(hour == 0 && min == 0 && sec == 0) return clock.innerHTML = "Merry Christmas :D"
+        }, 0)
     </script>
 </body>
