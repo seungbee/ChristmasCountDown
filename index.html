@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        .text{
+            text-align: center;
+            padding-top: 20%;
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+    <div class="text">
+        <h1 id="clock">testasdfasdf</h1>
+    </div>
+    
+    <script>
+        var clock = document.getElementById("clock")
+
+        
+
+        function printClock(){
+            
+            var t = new Date()
+            var hour = 24 - t.getHours()
+            var min = 60 - t.getMinutes()
+            var sec = 60 - t.getSeconds()
+
+            if(hour.toString().length == 1){
+                hour = "0" + hour.toString()
+            }
+            if(min.toString().length == 1){
+                min = "0" + min.toString()
+            }
+            if(sec.toString().length == 1){
+                sec = "0" + sec.toString()
+            }
+            var results = hour + " hours " + min + "min " + sec + " sec"
+            clock.innerHTML = results
+
+            if(hour == 0 && min == 0 & sec == 0){
+                clock.innerHTML = "Merry Christmas :D"
+            }
+            setTimeout("printClock()", 1)
+        }
+
+        printClock()
+
+    </script>
+</body>
